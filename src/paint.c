@@ -10548,7 +10548,7 @@ paint_in_escaped_effects(cairo_t *cr, const ns_box *b, const escape_step *fx,
         cairo_pattern_t *mp = NULL;
         if (mask) {
             cairo_translate(cr, fx->dx, fx->dy);
-            mp = mask_layers_pattern(cr, r, NULL);
+            mp = mask_layers_pattern(cr, r, NULL, op);
         }
         if (mp) {
             cairo_mask(cr, mp);
